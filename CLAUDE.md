@@ -54,12 +54,23 @@ All requests are browser `fetch` — no proxy needed (all three APIs support COR
 
 ## Git workflow
 
-Commit and push to GitHub after every meaningful change:
+**Commit and push after every meaningful unit of work** — do not batch up multiple features or fixes into one commit. Each commit should represent one logical change so it is easy to identify and revert if needed.
 
 ```bash
 git add <files>
-git commit -m "short description of what and why"
+git commit -m "verb: short description of what and why"
 git push
 ```
 
+Good commit message examples:
+- `fix: expand Overpass radius when fewer than 5 POIs returned`
+- `feat: add walking mode toggle alongside driving`
+- `style: tighten suggestion card spacing on mobile`
+
 Remote: `https://github.com/a-n-and/meet-in-the-middle`
+
+Commit cadence guidance:
+- After every new feature or behaviour change
+- After every bug fix
+- After any UI/style update that is visually meaningful
+- Before starting a large refactor (so there is a clean restore point)
